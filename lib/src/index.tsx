@@ -2,7 +2,7 @@
 import './polyfill.js'
 import Timer from 'timer'
 import React, { useEffect, useState, Fragment } from 'react'
-import { SSD1306Renderer, Text, Pixel } from './renderer.js'
+import { CommodettoRenderer, Text, Pixel } from './renderer.js'
 import Poco from "commodetto/Poco";
 
 const App = () => {
@@ -29,5 +29,5 @@ const App = () => {
 
 export default function draw(screen) {
   let render = new Poco(screen, { displayListLength: 2048 });
-  SSD1306Renderer.render(<App />, render);
+  CommodettoRenderer.render(<App />, render);
 }
